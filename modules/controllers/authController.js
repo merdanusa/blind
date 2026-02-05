@@ -4,7 +4,7 @@ export async function login(req, res, next) {
   try {
     const result = await AuthService.login(req.body);
 
-    res.status(201).json({
+    res.status(200).json({
       success: true,
       message: result.message || "User login successfully",
       user: result.user,

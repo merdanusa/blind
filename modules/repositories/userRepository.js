@@ -4,10 +4,11 @@ class UserRepository {
   async findByLogin(login) {
     return User.findOne({ login });
   }
-  async createUser(userData) {
+  async create(userData) {
     const user = new User(userData);
     return await user.save();
   }
+  
 }
 
 export default new UserRepository();

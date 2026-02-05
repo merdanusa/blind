@@ -10,9 +10,7 @@ class AuthService {
       throw new Error("Invalid login or password");
     }
 
-    const passwordMatch = await user.comparePassword(password.trim());
-
-    if (!passwordMatch) {
+    if (user.password !== password) {
       throw new Error("Invalid login or password");
     }
 

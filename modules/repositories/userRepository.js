@@ -1,6 +1,6 @@
 import User from "../../infra/models/User.js";
 
-export default class UserRepository {
+class UserRepository {
   async findByLogin(login) {
     return User.findOne({ login });
   }
@@ -9,3 +9,5 @@ export default class UserRepository {
     return await user.save();
   }
 }
+
+export default new UserRepository();

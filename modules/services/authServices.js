@@ -1,3 +1,5 @@
+import UserRepository from "../repositories/userRepository";
+
 class AuthService {
   async login(data) {
     const { login, password } = data;

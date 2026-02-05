@@ -1,4 +1,4 @@
-import { User } from "../../infra/models/User";
+import User from "../../infra/models/User.js";
 
 export default class UserRepository {
   async findByLogin(login) {

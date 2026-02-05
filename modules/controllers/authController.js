@@ -10,7 +10,7 @@ export async function login(req, res, next) {
       user: result.user,
     });
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 }
 
@@ -24,6 +24,6 @@ export async function register(req, res, next) {
       user: result.user,
     });
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 }

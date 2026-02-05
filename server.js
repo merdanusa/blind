@@ -7,6 +7,8 @@ import connectDb from "./infra/configs/db.config.js";
 
 const app = express();
 
+app.use(express.json());
+
 const PORT = process.env.PORT || 4000;
 
 app.use("/api/auth", authRoutes);
